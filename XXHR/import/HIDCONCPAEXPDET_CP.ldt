@@ -10,7 +10,7 @@ LDRCONFIG = "afcpprog.lct 120.7.12020000.7"
 
 # -- Begin Entity Definitions -- 
 
-DEFINE PROGRAM
+DEFINE FND_FOLDERS
   KEY   CONCURRENT_PROGRAM_NAME         VARCHAR2(30)
   KEY   APPLICATION_SHORT_NAME          VARCHAR2(50)
   CTX   OWNER                           VARCHAR2(4000)
