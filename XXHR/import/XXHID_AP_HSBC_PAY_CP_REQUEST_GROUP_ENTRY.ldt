@@ -10,7 +10,7 @@ LDRCONFIG = "aflvmlu.lct 120.1.12020000.2"
 
 # -- Begin Entity Definitions -- 
 
-DEFINE REQUEST_GROUPsacsdbcjsd
+DEFINE REQUEST_GROUP_ENTRY
   KEY   VIEW_APPSNAME                   VARCHAR2(50)
   KEY   LOOKUP_TYPE                     VARCHAR2(30)
   CTX   APPLICATION_SHORT_NAME          VARCHAR2(50)
