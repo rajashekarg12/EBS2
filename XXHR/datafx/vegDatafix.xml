@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataFix xmlns="http://flexagon.com/database/datafix">
+    <Description>Update price_per_kg for Spinach in vegetable table</Description>
+    
+    <FixSQL>
+        UPDATE vegetable SET price_per_kg = 35 WHERE name = 'Spinach';
+    </FixSQL>
+    
+    <BackupSQL>
+        CREATE TABLE vegetable_bkp AS SELECT * FROM vegetable;
+    </BackupSQL>
+    
+    <Validations>
+        <Validation>
+            <Description>Ensure Spinach price is updated to 35</Description>
+            <ValidationSQL>
+                SELECT CASE WHEN price_per_kg = 35 THEN 1 ELSE 0 END AS validation
+                FROM vegetable
+                WHERE name = 'Spinach'
+            </ValidationSQL>
+            <Environment>
+                <EnvironmentCode>DEFAULT</EnvironmentCode>
+                <Before>
+                    <Equals>0</Equals>
+                </Before>
+                <After>
+                    <Equals>1</Equals>
+                </After>
+                <UpdateCount>
+                    <Equals>1</Equals>
+                </UpdateCount>
+            </Environment>
+        </Validation>
+    </Validations>
+</DataFix>
