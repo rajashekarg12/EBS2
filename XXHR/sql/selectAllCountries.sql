@@ -3,3 +3,5 @@
 
 --SELECT student_id, name FROM students; -- Proper command44
 SELECT * FROM DUAL;
+--SELECT student_id, name FROM students; -- Proper command44
+SELECT * FROM DUAL;
